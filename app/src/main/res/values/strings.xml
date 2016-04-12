@@ -1,3 +1,34 @@
 <resources>
     <string name="app_name">PomodoroReminder</string>
+
+    <string name="no_reminder">点击下方的加号按钮以添加提醒事项</string>
+    <!-- DrawerMenu -->
+    <string name="settings">设置</string>
+    <string name="about">关于</string>
+    <string name="timer">计时器</string>
+    <string name="notify">提醒</string>
+
+    <string name="userName">未登陆</string>
+
+    <string name="editTextHint">输入待办事项</string>
+
+    <string name="date">提醒日期</string>
+    <string name="time">提醒时间</string>
+    <string name="isRepeat">是否重复</string>
+    <string name="repeatNo">重复间隔</string>
+    <string name="repeatType">重复类型</string>
+    <string name="toDoListTab">待办列表</string>
+    <string name="pomodoroTab">番茄时钟</string>
+    <string name="forumTab">番茄说</string>
+    <string name="listHintText">点击+添加待办事项</string>
+
+    <string name="titleActivityAddReminder">添加提醒</string>
+    <string name="titleActivityEditReminder">修改提醒</string>
+    <string name="tomato_string">番茄时钟</string>
+    <string name="shut_off_reminder">关闭提醒</string>
+    <string name="turn_on_reminder">开启提醒</string>
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="menu_name">设置</string>
 </resources>

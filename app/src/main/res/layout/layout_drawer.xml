@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/id_drawer"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/layout_fragments"/>
+
+    <include layout="@layout/layout_left_menu"/>
+</android.support.v4.widget.DrawerLayout>
