@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_centerInParent="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+    <com.hannasun.pomodororeminder.widgets.CountDownView
+        android:id="@+id/tomato_clock"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_red_light"/>
+
+
+    <TextView
+        android:id="@+id/working_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tomato_clock"
+        android:textSize="20dp"
+        android:textColor="@android:color/holo_red_light"
+        android:text="working"/>
+</LinearLayout>
+    <ImageButton
+
+        android:src="@mipmap/start_64px"
+        android:id="@+id/tomato_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="40dp"
+        android:background="@android:color/transparent"/>
+
+    <ImageButton
+
+        android:src="@mipmap/stop_red_48px"
+        android:id="@+id/tomato_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="40dp"
+        android:background="@android:color/transparent"/>
+</RelativeLayout>

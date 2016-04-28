@@ -33,7 +33,9 @@ captures/
 
 #Intellij project files
 .idea
-*iml
+*.iml
+*.ipr
+*.iws
 
 #System files
 .DS_Store

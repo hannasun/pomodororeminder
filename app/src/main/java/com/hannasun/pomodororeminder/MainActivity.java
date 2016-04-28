@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.hannasun.pomodororeminder.adapters.TabFragmentAdapter;
+import com.hannasun.pomodororeminder.preference.PomodoroPreference;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     private ViewGroup mSetTime;
     private ViewGroup mNotify;
     private ViewGroup mAbout;
+
+    private static final int REQUEST_PREFERENCES=1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,8 +73,8 @@ public class MainActivity extends AppCompatActivity {
         mDrawer.setDrawerListener(mToggle);
 
         mSetting = (ViewGroup) findViewById(R.id.rl_settings);
-        mSetTime = (ViewGroup) findViewById(R.id.rl_timer);
-        mNotify = (ViewGroup) findViewById(R.id.rl_notify);
+//        mSetTime = (ViewGroup) findViewById(R.id.rl_timer);
+//        mNotify = (ViewGroup) findViewById(R.id.rl_notify);
         mAbout = (ViewGroup) findViewById(R.id.rl_about);
     }
 
@@ -79,11 +82,14 @@ public class MainActivity extends AppCompatActivity {
     public void onSetting(View v) {
         /*Intent intent = new Intent(MainActivity.this, SettingActivity.class);
         startActivity(intent);*/
+
+        Intent intent = new Intent(MainActivity.this, PomodoroPreference.class);
+        startActivityForResult(intent, REQUEST_PREFERENCES);
     }
 
 
 
-    public void onSetTime(View view) {
+    /*public void onSetTime(View view) {
 
     }
 
@@ -94,5 +100,5 @@ public class MainActivity extends AppCompatActivity {
     public void onAbout(View view) {
         /*Intent intent = new Intent(MainActivity.this, AboutActivity.class);
         startActivity(intent);*/
-    }
+//    }
 }

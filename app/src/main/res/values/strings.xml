@@ -31,4 +31,52 @@
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
     <string name="menu_name">设置</string>
+
+    <string name="status_tomato">番茄时间</string>
+    <string name="status_rest">休息时间</string>
+
+    <string name="preferences">偏好设置</string>
+    <string name="pref_pomodoro_cat">番茄工作法设置</string>
+    <string name="pref_tomato_duration_title">番茄长度</string>
+    <string name="pref_tomato_duration_summary">番茄时长 = </string>
+
+    <string name="pref_rest_duration_title">休息长度</string>
+    <string name="pref_rest_duration_summary">休息时长 =  </string>
+
+    <string name="pref_notification_timer_title">通知栏计时器</string>
+    <string name="pref_notification_timer_summary">在通知栏显示计时器</string>
+
+    <string name="pref_tomato_cat">番茄铃声</string>
+    <string name="pref_tomato_ringtone_title">铃声</string>
+    <string name="pref_tomato_ringtone_summary">番茄时间结束后的提醒铃声</string>
+
+    <string name="pref_tomato_vibrate_title">振动</string>
+    <string name="pref_tomato_vibrate_summary">番茄时间结束后振动提醒</string>
+    <string name="pref_tomato_volume_title">音量</string>
+    <string name="pref_tomato_volume_summary">铃声音量 =  </string>
+    <string name="pref_tomato_delay_title">延时</string>
+    <string name="pref_tomato_delay_summary">延时时间： </string>
+
+    <string name="pref_rest_cat">休息铃声</string>
+    <string name="pref_rest_ringtone_title">铃声</string>
+    <string name="pref_rest_ringtone_summary">休息结束后的提醒铃声</string>
+    <string name="pref_rest_vibrate_title">振动</string>
+    <string name="pref_rest_vibrate_summary">休息结束后振动提醒</string>
+    <string name="pref_rest_volume_title">音量</string>
+    <string name="pref_rest_volume_summary">铃声音量 = </string>
+    <string name="pref_rest_delay_title">延时</string>
+    <string name="pref_rest_delay_summary">延时时间： </string>
+
+    <string name="alarm_message_tomato">O(∩_∩)O 完成一个番茄了，休息一下吧！</string>
+    <string name="alarm_message_rest">休息好了，来个番茄吧！</string>
+
+    <string name="start_tomato">开始番茄</string>
+    <string name="start_rest">开始休息</string>
+    <string name="stop_working">停止工作</string>
+    <string name="reset_tomato">清空番茄</string>
+
+    <string name="alarm_title">番茄时钟</string>
+
+    <string name="count_text">已完成 ： </string>
+    <string name="no_count_text">(⊙o⊙)没有番茄，开始番茄时钟吧</string>
 </resources>

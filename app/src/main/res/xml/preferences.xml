@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory >
+        <com.hannasun.pomodororeminder.preference.SliderPreference
+            android:key="tomato_duration"
+            android:title="@string/pref_tomato_duration_title"
+            android:summary="@string/pref_tomato_duration_summary"
+            android:defaultValue="1"
+            android:text=" 分钟"
+            android:max="60"/>
+        <com.hannasun.pomodororeminder.preference.SliderPreference
+            android:key="rest_duration"
+            android:title="@string/pref_rest_duration_title"
+            android:summary="@string/pref_rest_duration_summary"
+            android:defaultValue="1"
+            android:text=" 分钟"
+            android:max="30" />
+        <CheckBoxPreference
+            android:key="notification_timer"
+            android:summary="@string/pref_notification_timer_summary"
+            android:title="@string/pref_notification_timer_title"
+            android:defaultValue="true"/>
+    </PreferenceCategory>
+    <PreferenceScreen  android:title="@string/pref_tomato_cat">
+         <PreferenceCategory  >
+             <RingtonePreference
+                 android:key="tomato_ringtone"
+                 android:title="@string/pref_tomato_ringtone_title"
+                 android:summary="@string/pref_tomato_ringtone_summary"
+                 android:ringtoneType="alarm"
+                 android:showDefault="false"
+                 android:showSilent="false"/>
+
+             <CheckBoxPreference
+                 android:key="tomato_vibrate"
+                 android:title="@string/pref_tomato_vibrate_title"
+                 android:summary="@string/pref_tomato_vibrate_summary"
+                 android:defaultValue="false"
+                 />
+               <com.hannasun.pomodororeminder.preference.SliderPreference
+                   android:key="tomato_volume"
+                   android:title="@string/pref_tomato_volume_title"
+                   android:summary="@string/pref_tomato_volume_summary"
+                   android:defaultValue="30"
+                   android:text=" %"
+                   android:max="100"/>
+         </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen  android:title="@string/pref_rest_cat">
+        <PreferenceCategory  >
+            <RingtonePreference
+                android:key="rest_ringtone"
+                android:title="@string/pref_rest_ringtone_title"
+                android:summary="@string/pref_rest_ringtone_summary"
+                android:ringtoneType="alarm"
+                android:showDefault="false"
+                android:showSilent="false"/>
+
+            <CheckBoxPreference
+                android:key="rest_vibrate"
+                android:title="@string/pref_rest_vibrate_title"
+                android:summary="@string/pref_rest_vibrate_summary"
+                android:defaultValue="false"
+                />
+            <com.hannasun.pomodororeminder.preference.SliderPreference
+                android:key="rest_volume"
+                android:title="@string/pref_rest_volume_title"
+                android:summary="@string/pref_rest_volume_summary"
+                android:defaultValue="30"
+                android:text=" %"
+                android:max="100"/>
+        </PreferenceCategory>
+    </PreferenceScreen>
+</PreferenceScreen>

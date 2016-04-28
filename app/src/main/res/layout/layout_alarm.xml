@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+<TextView
+    android:layout_margin="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:id="@+id/alarm_message"
+    android:gravity="center"
+    android:textSize="25dp"
+    android:textColor="@android:color/holo_orange_dark"/>
+
+    <com.hannasun.pomodororeminder.widgets.CountDownView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="45dp"
+        android:textColor="@color/red"
+        android:layout_centerInParent="true"
+        android:id="@+id/tomato_clock"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:background="@android:color/holo_blue_bright"
+            android:id="@+id/btn_continue"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:padding="5dp"
+            android:textColor="@android:color/holo_red_light"/>
+        <Button
+            android:background="@android:color/holo_red_light"
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:padding="5dp"
+            android:textColor="@android:color/holo_blue_bright"/>
+    </LinearLayout>
+
+</RelativeLayout>
