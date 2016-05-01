@@ -50,6 +50,9 @@ public class CountDownView extends TextView {
 
     public void stop() {
         mTomatoDuration = prefs.getInt(Pomodoro.PREF_TOMATO_DURATION, Pomodoro.PREF_TOMATO_DURATION_DEFAULT);
+        if(mTomatoDuration < 10)
+            setText(String.valueOf(0)  + mTomatoDuration + ":00");
+        else
         setText(mTomatoDuration + ":00");
         mRunning = false;
     }
@@ -67,10 +70,16 @@ public class CountDownView extends TextView {
         long left = mUntil - System.currentTimeMillis();
         long min = Math.abs((long)(left / 60000));
         long sec = Math.abs((long)((left / 1000 - min * 60 )  % 60));
-        if(sec < 10) {
-            setText((left < 0 ? "-" : "") + min + ":0" + sec);
+        if(min < 10) {
+            if(sec < 10) {
+                setText((left < 0 ? "-" : "") + "0" + min + ":0" + sec);
+            } else
+            setText((left < 0 ? "-" : "") + "0" + min +  ":" + sec);
         } else {
-            setText((left < 0 ? "-" : "") + min + ":" + sec);
+            if(sec < 10) {
+                setText((left < 0 ? "-" : "")  + min + ":0" + sec);
+            } else
+            setText((left < 0 ? "-" : "")  + min + ":" + sec);
         }
     }
 }

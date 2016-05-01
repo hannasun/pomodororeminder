@@ -149,10 +149,17 @@ public class Pomodoro {
         long min = Math.abs((long)(left / 60000));
 
         long sec = Math.abs((long)((left / 1000 - min * 60 )  % 60));
-        if(sec < 10) {
-           return ((left < 0 ? "-" : "") + min + ":0" + sec);
+
+        if(min < 10) {
+            if(sec < 10) {
+                return ((left < 0 ? "-" : "") + "0" + min + ":0" + sec);
+            } else
+            return ((left < 0 ? "-" : "") + "0" + min +  ":" + sec);
         } else {
-            return ((left < 0 ? "-" : "") + min + ":" + sec);
+            if(sec < 10) {
+                return ((left < 0 ? "-" : "")  + min + ":0" + sec);
+            } else
+            return ((left < 0 ? "-" : "")  + min + ":" + sec);
         }
     }
 
