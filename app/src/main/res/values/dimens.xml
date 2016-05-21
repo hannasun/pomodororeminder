@@ -14,5 +14,6 @@
     <dimen name="setReminderTextMarginLeft">12dp</dimen>
     <dimen name="setReminderTextMarginTop">5dp</dimen>
 
+    <dimen name="about_text_margin">10dp</dimen>
     <dimen name="edit_text_margin">10dp</dimen>
 </resources>

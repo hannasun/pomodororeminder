@@ -47,6 +47,12 @@
         <activity android:name=".preference.PomodoroPreference"
             android:theme="@style/Base.Theme.AppCompat.Light.DarkActionBar" />
 
+        <activity
+            android:name=".AboutActivity"
+            android:label="@string/title_about"/>
+
+        <activity android:name=".LicensesActivity"
+            android:label="@string/license"/>
     </application>
 
 </manifest>

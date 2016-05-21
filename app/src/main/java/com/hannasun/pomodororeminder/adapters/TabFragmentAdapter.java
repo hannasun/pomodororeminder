@@ -13,7 +13,7 @@ import com.hannasun.pomodororeminder.fragments.TomatoCountFragment;
  */
 public class TabFragmentAdapter extends FragmentPagerAdapter{
 
-    String[] titles = new String[]{ "番茄时钟", "番茄数", "提醒"};
+    String[] titles = new String[]{ "番茄时钟", "番茄数", "提醒列表"};
 
     public TabFragmentAdapter(FragmentManager fm) {
         super(fm);

@@ -79,4 +79,48 @@
 
     <string name="count_text">已完成 ： </string>
     <string name="no_count_text">(⊙o⊙)没有番茄，开始番茄时钟吧</string>
+
+    <string name="title_about">关于</string>
+    <string name="version_text">PomodoroReminder
+          番茄提醒
+    </string>
+    <string name="version_no">版本1.0.0</string>
+    <string name="license"><u>开源协议</u></string>
+    <string name="feedback"><u>反馈</u></string>
+
+  <string name="licenses_text1">
+        <b>1 MaterialDateTimePicke</b>  \n\n
+        Copyright © 2015 Wouter Dullaert  \n\n
+        <b>2  Remindly  \n\n</b>
+        Copyright © 2015 Blanyal D\'Souza \n\n
+         <b>3 Pomodoro</b>  \n\n
+      <b>Original Source by</b> <u>M. Wiggins</u>\n\n
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at\n\n
+
+    http://www.apache.org/licenses/LICENSE-2.0\n\n
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License. \n\n\n
+    </string>
+
+ <!-- <string name="licenses_text2">
+
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at\n\n
+
+    http://www.apache.org/licenses/LICENSE-2.0\n\n
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License. \n\n\n
+    </string>-->
 </resources>

@@ -1,12 +1,14 @@
 package com.hannasun.pomodororeminder;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.view.ActionMode;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,7 +40,8 @@ public class MainActivity extends AppCompatActivity {
         mToolbar = (Toolbar)findViewById(R.id.id_toolbar);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle(getTitle());
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
         //Initialize tab in pager
         mPagers = (ViewPager)findViewById(R.id.id_viewPager);
         mTabs = (TabLayout)findViewById(R.id.id_tabs);
@@ -89,16 +92,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    /*public void onSetTime(View view) {
-
-    }
-
-    public void onNotify(View view) {
-
-    }
-
     public void onAbout(View view) {
-        /*Intent intent = new Intent(MainActivity.this, AboutActivity.class);
-        startActivity(intent);*/
-//    }
+        Intent intent = new Intent(MainActivity.this, AboutActivity.class);
+        startActivity(intent);
+    }
 }
