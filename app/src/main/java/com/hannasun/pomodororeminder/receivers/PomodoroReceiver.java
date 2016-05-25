@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
+import android.preference.PreferenceManager;
 import android.provider.Settings;
 
 import com.hannasun.pomodororeminder.pomodoro.AlarmHelper;
@@ -23,7 +24,8 @@ public class PomodoroReceiver extends BroadcastReceiver{
         long start = intent.getLongExtra(Pomodoro.EXTRA_ALARM_TYPE, 0);
 
         //Load setting
-        SharedPreferences prefs = context.getSharedPreferences(Pomodoro.PREFERENCES, 0);
+   SharedPreferences prefs = context.getSharedPreferences(Pomodoro.PREFERENCES, 0);
+//        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         Uri uri = null;
         int timeout = 1;
         boolean vibrate = false;

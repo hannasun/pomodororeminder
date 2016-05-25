@@ -55,7 +55,8 @@ public class AlarmReceiver extends WakefulBroadcastReceiver{
                 .setContentIntent(mClick)
                 .setAutoCancel(true)
                 .setOnlyAlertOnce(true)
-                .setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION));
+                .setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION))
+                .setDefaults(NotificationCompat.DEFAULT_LIGHTS | NotificationCompat.DEFAULT_VIBRATE);
         mManager = (NotificationManager)context.getSystemService(Context.NOTIFICATION_SERVICE);
         mManager.notify(mReceivedId, mBuilder.build());
 

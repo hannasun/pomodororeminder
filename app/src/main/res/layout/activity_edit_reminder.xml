@@ -158,7 +158,7 @@
                     android:textColor="@color/editReminderTitleColor"
                     android:layout_centerVertical="true"/>
             </RelativeLayout>
-            <RelativeLayout
+          <!--  <RelativeLayout
                 android:id="@+id/rl_isPomodoro"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/setReminderHeight"
@@ -193,7 +193,7 @@
                     android:checked="true"
                     android:textOn="开启"
                     android:textOff="关闭"/>
-            </RelativeLayout>
+            </RelativeLayout>-->
             <RelativeLayout
                 android:id="@+id/rl_isRepeat"
                 android:layout_width="match_parent"

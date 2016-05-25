@@ -3,6 +3,7 @@ package com.hannasun.pomodororeminder.widgets;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
@@ -32,7 +33,7 @@ public class CountDownView extends TextView {
             }
         };
   prefs = context.getSharedPreferences(Pomodoro.PREFERENCES, 0);
-
+//prefs = PreferenceManager.getDefaultSharedPreferences(context);
 
     }
 
