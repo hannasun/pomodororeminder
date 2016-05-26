@@ -32,8 +32,8 @@ public class CountDownView extends TextView {
                 }
             }
         };
-  prefs = context.getSharedPreferences(Pomodoro.PREFERENCES, 0);
-//prefs = PreferenceManager.getDefaultSharedPreferences(context);
+//  prefs = context.getSharedPreferences(Pomodoro.PREFERENCES, 0);
+prefs = PreferenceManager.getDefaultSharedPreferences(context);
 
     }
 

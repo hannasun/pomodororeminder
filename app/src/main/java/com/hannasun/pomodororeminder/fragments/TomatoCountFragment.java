@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -52,7 +53,7 @@ public class TomatoCountFragment extends Fragment {
         mCountStatus = (TextView) rootView.findViewById(R.id.tv_status);
         mReset = (Button) rootView.findViewById(R.id.id_reset);
         ll_count = (LinearLayout)rootView.findViewById(R.id.ll_count);
-        mPrefs = mContext.getSharedPreferences(Pomodoro.PREFERENCES, 0);
+        mPrefs = PreferenceManager.getDefaultSharedPreferences(mContext);
         mTomatoCount = mPrefs.getInt(Pomodoro.PREF_TOMATO_COUNT, 0);
         mAlarmType = mPrefs.getInt(Pomodoro.PREF_ALARM_TYPE, 0);
 

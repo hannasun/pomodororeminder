@@ -10,6 +10,7 @@ import android.content.SharedPreferences;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.os.PowerManager;
+import android.preference.PreferenceManager;
 
 import com.hannasun.pomodororeminder.MainActivity;
 import com.hannasun.pomodororeminder.R;
@@ -43,7 +44,7 @@ public class Pomodoro {
     public final static boolean PREF_NOTIFICATION_TIMER_DEFAULT = true;
 
     public final static String PREF_TOMATO_DURATION = "tomato_duration";
-    public final static int PREF_TOMATO_DURATION_DEFAULT = 1;
+    public final static int PREF_TOMATO_DURATION_DEFAULT = 25;
 
     public final static String PREF_TOMATO_RINGTONE = "tomato_ringtone";
     public final static String PREF_TOMATO_RINGTONE_DEFAULT = null;
@@ -59,7 +60,7 @@ public class Pomodoro {
 
 
     public final static String PREF_REST_DURATION = "rest_duration";
-    public final static int PREF_REST_DURATION_DEFAULT = 1;
+    public final static int PREF_REST_DURATION_DEFAULT = 5;
 
     public final static String PREF_REST_RINGTONE = "rest_ringtone";
     public final static String PREF_REST_RINGTONE_DEFAULT = null;
@@ -83,7 +84,7 @@ public class Pomodoro {
     }
 
     public static void stopTomato(Context context) {
-        SharedPreferences prefs = context.getSharedPreferences(Pomodoro.PREFERENCES, 0);
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);//context.getSharedPreferences(Pomodoro.PREFERENCES, 0);
 
         prefs.edit().putInt(Pomodoro.PREF_ALARM_TYPE, 0)
                     .putLong(Pomodoro.PREF_ALARM_DURATION, 0)
@@ -101,8 +102,8 @@ public class Pomodoro {
 
     static void pendingAlert(Context context, int type, long durationMillis, long startTime) {
         AlarmManager am = (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
-        SharedPreferences pref = context.getSharedPreferences(Pomodoro.PREFERENCES, 0);
-
+       // SharedPreferences pref = context.getSharedPreferences(Pomodoro.PREFERENCES, 0);
+       SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(context);
         if(durationMillis == 0) {
             if (type == Pomodoro.ALARM_TYPE_REST) {
                 durationMillis = pref.getInt(Pomodoro.PREF_REST_DURATION, Pomodoro.PREF_REST_DURATION_DEFAULT) * 60000;
@@ -137,7 +138,8 @@ public class Pomodoro {
         return pref.getInt(Pomodoro.PREF_TOMATO_COUNT, 0);
     }
   public   static int setTomatoCount(Context context, int value) {
-        SharedPreferences pref = context.getSharedPreferences(Pomodoro.PREFERENCES, 0);
+//        SharedPreferences pref = context.getSharedPreferences(Pomodoro.PREFERENCES, 0);
+      SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(context);
         int tomatoCount = pref.getInt(Pomodoro.PREF_TOMATO_COUNT, 0);
         tomatoCount = value < 0 ? Math.abs(value) + tomatoCount : value;
         pref.edit().putInt(Pomodoro.PREF_TOMATO_COUNT, tomatoCount).commit();

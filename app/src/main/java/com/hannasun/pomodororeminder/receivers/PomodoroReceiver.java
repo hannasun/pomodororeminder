@@ -24,8 +24,8 @@ public class PomodoroReceiver extends BroadcastReceiver{
         long start = intent.getLongExtra(Pomodoro.EXTRA_ALARM_TYPE, 0);
 
         //Load setting
-   SharedPreferences prefs = context.getSharedPreferences(Pomodoro.PREFERENCES, 0);
-//        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+//   SharedPreferences prefs = context.getSharedPreferences(Pomodoro.PREFERENCES, 0);
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         Uri uri = null;
         int timeout = 1;
         boolean vibrate = false;

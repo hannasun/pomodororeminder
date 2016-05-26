@@ -62,7 +62,7 @@ public class PomodoroAlarm extends AppCompatActivity{
                      Pomodoro.startTomato(PomodoroAlarm.this);
                      Pomodoro.setTomatoCount(PomodoroAlarm.this, -1);
                  }
-
+                TomatoCountFragment.update_tomato_count();
                  finish();
              }
          });

@@ -3,6 +3,7 @@ package com.hannasun.pomodororeminder.fragments;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -56,7 +57,8 @@ public class PomodoroFragment extends Fragment {
         mStartButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mPrefs = mContext.getSharedPreferences(Pomodoro.PREFERENCES, 0);
+//                mPrefs = mContext.getSharedPreferences(Pomodoro.PREFERENCES, 0);
+                mPrefs = PreferenceManager.getDefaultSharedPreferences(mContext);
                 int duration = mPrefs.getInt(Pomodoro.PREF_TOMATO_DURATION, Pomodoro.PREF_TOMATO_DURATION_DEFAULT);
 
                 Pomodoro.startTomato(mContext);
@@ -89,7 +91,8 @@ public class PomodoroFragment extends Fragment {
         @Override
         public void onResume () {
             super.onResume();
-            mPrefs = mContext.getSharedPreferences(Pomodoro.PREFERENCES, 0);
+            //mPrefs = mContext.getSharedPreferences(Pomodoro.PREFERENCES, 0);
+            mPrefs = PreferenceManager.getDefaultSharedPreferences(mContext);
             long start = mPrefs.getLong(Pomodoro.PREF_ALARM_START, 0);
             long duration = mPrefs.getLong(Pomodoro.PREF_ALARM_DURATION, 0);
             mAlarmType = mPrefs.getInt(Pomodoro.PREF_ALARM_TYPE, 0);
