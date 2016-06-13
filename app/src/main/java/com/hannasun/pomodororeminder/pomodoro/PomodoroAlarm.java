@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.hannasun.pomodororeminder.MainActivity;
 import com.hannasun.pomodororeminder.R;
 import com.hannasun.pomodororeminder.fragments.PomodoroFragment;
 import com.hannasun.pomodororeminder.fragments.TomatoCountFragment;
@@ -62,7 +63,6 @@ public class PomodoroAlarm extends AppCompatActivity{
                      Pomodoro.startTomato(PomodoroAlarm.this);
                      Pomodoro.setTomatoCount(PomodoroAlarm.this, -1);
                  }
-                TomatoCountFragment.update_tomato_count();
                  finish();
              }
          });
