@@ -43,6 +43,7 @@ public class AlarmReceiver extends WakefulBroadcastReceiver{
         //Create intent to open ReminderEditActivity on notification click
         Intent editIntent =  new Intent(context, ReminderEditActivity.class);
         editIntent.putExtra(ReminderEditActivity.EXTRA_REMINDER_ID, Integer.toString(mReceivedId));
+        editIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         PendingIntent mClick = PendingIntent.getActivity(context, mReceivedId, editIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 
         //Create a notification

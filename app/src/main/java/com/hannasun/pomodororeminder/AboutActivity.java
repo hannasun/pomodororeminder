@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.view.ActionMode;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Toast;
 
 /**
  *
@@ -42,7 +43,11 @@ public class AboutActivity extends AppCompatActivity {
     public void aboutFeedback(View view) {
         Uri uri = Uri.parse("mailto:sunday29@qq.com");
         Intent intent = new Intent(Intent.ACTION_SENDTO, uri);
-        startActivity(intent);
+        if(intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        } else {
+            Toast.makeText(this," No receiving apps installed!", Toast.LENGTH_SHORT).show();
+        }
     }
 
 }
