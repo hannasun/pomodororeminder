@@ -1,13 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.2"
+    compileSdkVersion 26
 
     defaultConfig {
         applicationId "com.hannasun.pomodororeminder"
         minSdkVersion 16
-        targetSdkVersion 23
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
     }
@@ -20,10 +19,13 @@ android {
 }
 
 dependencies {
+    def timepicker_version = "3.6.2"
+    def support_version = "26.1.0"
+
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.3.0'
-    compile 'com.android.support:recyclerview-v7:23.3.0'
-    compile 'com.android.support:design:23.3.0'
-    compile 'com.wdullaer:materialdatetimepicker:2.3.0'
+    compile "com.android.support:appcompat-v7:$support_version"
+    compile "com.android.support:recyclerview-v7:$support_version"
+    compile "com.android.support:design:$support_version"
+    compile "com.wdullaer:materialdatetimepicker:$timepicker_version"
 }

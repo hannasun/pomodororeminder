@@ -233,17 +233,6 @@ public class ReminderEditActivity extends AppCompatActivity implements TimePicke
         mDateText.setText(mDate);
     }
 
-    @Override
-    public void onTimeSet(RadialPickerLayout view, int hourOfDay, int minute, int second) {
-        mHour = hourOfDay;
-        mMinute = minute;
-        if(minute < 10) {
-            mTime = hourOfDay + ":" + "0" + minute;
-        } else {
-            mTime = hourOfDay + ":" + minute;
-        }
-        mTimeText.setText(mTime);
-    }
 
     //On Clicking Time picker
     public void setTime(View v) {
@@ -452,4 +441,21 @@ public class ReminderEditActivity extends AppCompatActivity implements TimePicke
         }
     }
 
+    @Override
+    public void onTimeSet(TimePickerDialog view, int hourOfDay, int minute, int second) {
+
+        mHour = hourOfDay;
+        mMinute = minute;
+        if(minute < 10) {
+            mTime = hourOfDay + ":" + "0" + minute;
+        } else {
+            mTime = hourOfDay + ":" + minute;
+        }
+        mTimeText.setText(mTime);
+    }
+
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+
+    }
 }

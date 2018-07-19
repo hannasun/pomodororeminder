@@ -207,17 +207,6 @@ implements TimePickerDialog.OnTimeSetListener,
         mDateText.setText(mDate);
     }
 
-    @Override
-    public void onTimeSet(RadialPickerLayout view, int hourOfDay, int minute, int second) {
-        mHour = hourOfDay;
-        mMinute = minute;
-        if(minute < 10) {
-            mTime = hourOfDay + ":" + "0" + minute;
-        } else {
-            mTime = hourOfDay + ":" +minute;
-        }
-        mTimeText.setText(mTime);
-    }
 
     public void onSwitchRepeat(View view) {
         boolean on = ((Switch)view).isChecked();
@@ -387,4 +376,21 @@ implements TimePickerDialog.OnTimeSetListener,
         }
     }
 
+    @Override
+    public void onTimeSet(TimePickerDialog view, int hourOfDay, int minute, int second) {
+
+        mHour = hourOfDay;
+        mMinute = minute;
+        if(minute < 10) {
+            mTime = hourOfDay + ":" + "0" + minute;
+        } else {
+            mTime = hourOfDay + ":" +minute;
+        }
+        mTimeText.setText(mTime);
+    }
+
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+
+    }
 }
